@@ -2,6 +2,9 @@ Makers BNB
 ==========
 Build a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
+Continuous deployment via Heroku
+-------
+https://ezeybnb.herokuapp.com/
 
 User stories:
 -------
