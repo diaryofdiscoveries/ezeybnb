@@ -15,5 +15,10 @@
     "serve-favicon": "~2.4.5",
     "kerberos": "~0.0.17",
     "mongodb": "~2.0.33"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.0",
+    "zombie": "^5.0.7"
   }
 }

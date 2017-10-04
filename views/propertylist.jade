@@ -6,8 +6,7 @@ block content
   ul
     each property, i in propertylist
       li#property_list_item
-        a(href="#") #{property.name}
-        at
-        #{property.location} price:
-        #{property.price} description:
-        #{property.description}
+        a(href="#") Name: #{property.name},
+        #{property.location}  
+        price: £#{property.price}
+        description: #{property.description}
