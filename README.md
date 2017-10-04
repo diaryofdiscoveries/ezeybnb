@@ -2,6 +2,19 @@ Makers BNB
 ==========
 Build a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
+Technologies used
+----
+- Javascript
+- Node.js
+- Express
+- MongoDB
+- Jade
+
+Tested using:
+----
+- Zombie.js
+- Mocha/Chai
+
 Continuous deployment via Heroku
 -------
 https://ezeybnb.herokuapp.com/
