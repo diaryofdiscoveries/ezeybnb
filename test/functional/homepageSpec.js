@@ -26,6 +26,12 @@ describe('homepage', function() {
     assert.equal(this.browser.text('p'), 'Welcome to Ezey BnB');
   });
 
+  it('should have signUp button', function() {
+    assert.ok(this.browser.success);
+    assert.equal(this.browser.text('h2'), 'Please sign Up');
+    this.browser.assert.element('form input[type=submit]');
+  });
+
   after(function(done) {
     this.server.close(done);
   });
