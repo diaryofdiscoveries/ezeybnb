@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  head
+    h1= title
+    p Welcome to #{title}
+  body
+    h2='Please sign Up'
+      form(name="SignUp", method="post")
+          div.actions
+              input(type="submit", value="SignUp")
