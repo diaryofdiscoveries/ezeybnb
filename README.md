@@ -15,9 +15,27 @@ Tested using:
 - Zombie.js
 - Mocha/Chai
 
+How to Install
+-----
+````
+$ git clone https://github.com/diaryofdiscoveries/ezeybnb.git
+$ cd ezeybnb
+$ npm install
+$ brew install mongodb  
+$ sudo mkdir -p /data/db  
+$ sudo chown -R `id -un` /data/db
+````
+How to Run Tests
+-----
+````
+$ cd ezeybnb
+$ mocha
+````
+
 Continuous deployment via Heroku
 -------
 https://ezeybnb.herokuapp.com/
+
 
 User stories:
 -------

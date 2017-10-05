@@ -7,7 +7,7 @@ var app = require('../../app');
 var Browser = require('zombie');
 var assert = require('assert');
 
-describe('properties page', function() {
+describe('properties', function() {
 
   before(function() {
     this.server = http.createServer(app).listen(3000);
