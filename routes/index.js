@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongodb = require('mongodb');
+var Property = require('../js/property');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -69,6 +70,30 @@ router.post('/addproperty', function(req, res) {
         db.close();
       });
     }
+  });
+});
+
+router.get('/confirm', function(req, res){
+  res.render('confirm', {title: 'Booking confirmed'});
+});
+
+router.post('/book', function(req, res) {
+  var MongoClient = mongodb.MongoClient;
+
+  var url = 'mongodb://localhost:27017/ezeybnbdb';
+
+  MongoClient.connect(url, function(err, db) {
+    if (err) {
+      console.log("Unable to connect to server, err", err);
+    } else {
+      console.log("Connected to server");
+
+      var collection = db.collection('properties');
+
+      collection.update({name : req.body.PropertyName}, {$set : {booked : true}});
+        res.redirect("confirm");
+      }
+        db.close();
   });
 });
 

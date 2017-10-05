@@ -11,7 +11,7 @@ block content
         p Price per night: £#{property.price}
         p Description: #{property.description}
         - if (property.booked === false) {
-        form(name="BookProperty", method="post", action="/properties/book")
+        form(name="BookProperty", method="post", action="/book")
           div.actions
             input(type="submit", name="PropertyName", value="Book")
         - } else {
