@@ -1,12 +1,21 @@
 extends layout
 
 block content
-  h3.
+  h1.
     Properties
   ul
     each property, i in propertylist
       li#property_list_item
-        a(href="#") Name: #{property.name},
-        #{property.location}  
-        price: £#{property.price}
-        description: #{property.description}
+        p #{property.name}
+        p Location: #{property.location}
+        p Price per night: £#{property.price}
+        p Description: #{property.description}
+        - if (property.booked === false) {
+        form(name="BookProperty", method="post", action="/properties/book")
+          div.actions
+            input(type="submit", name="PropertyName", value="Book")
+        - } else {
+        p --- This property is already booked. Please select another ---
+        - }
+        br
+        br

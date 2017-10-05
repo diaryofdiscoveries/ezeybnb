@@ -22,7 +22,7 @@ describe('properties page', function() {
 
   it('should show Properties unordered list', function(){
     assert.ok(this.browser.success);
-    assert.equal(this.browser.text('h3'), 'Properties');
+    assert.equal(this.browser.text('h1'), 'Properties');
     this.browser.assert.elements('#property_list_item');
   });
 
