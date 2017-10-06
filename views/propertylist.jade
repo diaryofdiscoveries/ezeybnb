@@ -4,12 +4,15 @@ block content
   h1.
     Properties
   ul
+    br
+    br
     each property, i in propertylist
       li#property_list_item
         p #{property.name}
         p Location: #{property.location}
         p Price per night: £#{property.price}
         p Description: #{property.description}
+        br
         - if (property.booked === false) {
         form(name="BookProperty", method="post", action="/book")
           div.actions
@@ -17,5 +20,6 @@ block content
         - } else {
         p --- This property is already booked. Please select another ---
         - }
+        br
         br
         br
