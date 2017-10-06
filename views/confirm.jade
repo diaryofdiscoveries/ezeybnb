@@ -2,3 +2,7 @@ extends layout
 
 block content
   h3= title
+
+  form(name="properties", method="get", action="/properties")
+    div.actions
+      input(type="submit", name="Properties", value="Back to Properties")
