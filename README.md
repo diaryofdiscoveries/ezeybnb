@@ -2,6 +2,10 @@ Makers BNB
 ==========
 Build a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
+Objectives of exercise
+----
+Working as a team and learning an entirely new tech stack in a few days.
+
 Technologies used
 ----
 - Javascript
@@ -17,25 +21,48 @@ Tested using:
 
 How to Install
 -----
+- The application:
 ````
 $ git clone https://github.com/diaryofdiscoveries/ezeybnb.git
 $ cd ezeybnb
 $ npm install
+````
+- The database:
+````
 $ brew install mongodb  
 $ sudo mkdir -p /data/db  
 $ sudo chown -R `id -un` /data/db
 ````
+
+How to Run
+-----
+- In one terminal, connect to the database:
+````
+$ mongod --dbpath /(file path)/ezeybnb/data
+````
+- In another terminal, run the app:
+````
+$ cd ezeybnb
+$ npm start
+````
+- You can open the database in another terminal:
+````
+$ cd ezeybnb
+$ mongo
+$ use ezeybnbdb
+````
+
 How to Run Tests
 -----
+In one terminal, connect to the database:
+````
+$ mongod --dbpath /(file path)/ezeybnb/data
+````
+In another terminal, run tests:
 ````
 $ cd ezeybnb
 $ mocha
 ````
-
-Continuous deployment via Heroku
--------
-https://ezeybnb.herokuapp.com/
-
 
 User stories:
 -------
